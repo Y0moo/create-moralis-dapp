@@ -1,0 +1,16 @@
+{
+  "name": "create-eth-dapp",
+  "version": "1.0.1-beta.1",
+  "type": "commonjs",
+  "bin": {
+    "create-eth-dapp": "./src/index.js"
+  },
+  "dependencies": {
+    "@create-moralis-dapp/toolkit": "file:../toolkit",
+    "@create-moralis-dapp/next": "file:../next",
+    "chalk": "^5.0.1",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.0.0",
+    "tslib": "^2.3.0"
+  }
+}

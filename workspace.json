@@ -1,5 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "create-eth-dapp": "packages/create-eth-dapp",
+    "next": "packages/next",
+    "toolkit": "packages/toolkit"
+  }
 }

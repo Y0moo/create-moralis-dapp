@@ -1,0 +1,7 @@
+{
+  "name": "@create-moralis-dapp/next",
+  "version": "1.0.1-beta.1",
+  "dependencies": {
+    "@create-moralis-dapp/toolkit": "file:../toolkit"
+  }
+}

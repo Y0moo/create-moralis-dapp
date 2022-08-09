@@ -1,0 +1,3 @@
+{
+  "base-app": { "path": "./src/generators/base-app" }
+}
