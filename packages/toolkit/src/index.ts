@@ -1,5 +1,7 @@
-import { readdirSync, renameSync, statSync } from 'fs-extra';
+import { copy, readdirSync, renameSync, statSync } from 'fs-extra';
 import { join, normalize } from 'path';
+import { renderFile } from 'ejs';
+import { writeFile } from 'fs';
 
 export const getAllFilesPathsInDir = (parent: string): string[] => {
   let res: string[] = [];
@@ -24,11 +26,24 @@ export const getAllFilesPathsInDir = (parent: string): string[] => {
 };
 
 export const normalizeTemplateFiles = (destination: string) => {
-  const files = getAllFilesPathsInDir(destination);
-  files.forEach((filePath) => {
+  const filePaths = getAllFilesPathsInDir(destination);
+  filePaths.forEach((filePath) => {
     if (filePath.includes('.hbs')) {
-      renameSync(filePath, filePath.replace('.hbs', ''));
+      const newContent = renderFile(filePath, { name: 'kek' });
+      writeFile(filePath, newContent);
+      // console.log('newContent: ', newContent);
+      // renameSync(filePath, filePath.replace('.hbs', ''));
     }
   });
 };
-normalizeTemplateFiles(normalize('E:/Work/NPM_LIBS_NAMES/testing/finale'));
+
+export const generateWithTemplate = async (
+  templateDir: string,
+  destination: string
+) => {
+  await copy(templateDir, destination);
+  await normalizeTemplateFiles(destination);
+
+  // normalizeTemplateFiles(string);
+};
+// normalizeTemplateFiles(normalize('E:/Work/NPM_LIBS_NAMES/testing/finale'));

@@ -1,7 +1,10 @@
 import { copy } from 'fs-extra';
 import { join } from 'path';
 import { prompt } from 'inquirer';
-import { normalizeTemplateFiles } from '@create-moralis-dapp/toolkit';
+import {
+  generateWithTemplate,
+  normalizeTemplateFiles,
+} from '@create-moralis-dapp/toolkit';
 
 export const questions = [
   {
@@ -36,8 +39,9 @@ export const baseAppGenerator = async () => {
   const destination = join(process.cwd(), name);
 
   try {
-    await copy(templateDir, destination);
-    normalizeTemplateFiles(destination);
+    // await copy(templateDir, destination);
+    // normalizeTemplateFiles(destination);
+    await generateWithTemplate(templateDir, destination);
   } catch (e) {
     throw new Error(e);
   }

@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "new:npm": "nx generate npm-package",
+    "new:lib": "nx generate @nrwl/node:library --importPath='xxx' --buildable",
     "build:all": "nx run-many --target=build",
-    "publish:all": "nx run-many --target=publish --ver=1.0.1-beta.11 --tag=latest  "
+    "publish:all": "nx run-many --target=publish --ver=1.0.1-beta.11 --tag=latest  ",
+    "ced:dev": "node tools/scripts/dev.js"
   },
   "type": "module",
   "private": true,

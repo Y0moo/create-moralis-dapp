@@ -293,12 +293,13 @@
 "@create-moralis-dapp/next@file:packages/next":
   version "1.0.1-beta.1"
   dependencies:
-    "@create-moralis-dapp/toolkit" "file:C:/Users/lovka/AppData/Local/Yarn/Cache/v6/npm-@create-moralis-dapp-next-1.0.1-beta.1-ce85a92b-1bd7-4a60-9fce-517839863329-1659963539917/node_modules/@create-moralis-dapp/toolkit"
+    "@create-moralis-dapp/toolkit" "file:C:/Users/lovka/AppData/Local/Yarn/Cache/v6/npm-@create-moralis-dapp-next-1.0.1-beta.1-e3c72cab-94be-4d13-8559-6e43432e228e-1660193195377/node_modules/@create-moralis-dapp/toolkit"
 
 "@create-moralis-dapp/toolkit@file:packages/toolkit":
   version "1.0.1-beta.1"
   dependencies:
     chalk "^5.0.1"
+    ejs "^3.1.8"
     fs-extra "^10.1.0"
     inquirer "^8.0.0"
     tslib "^2.3.0"
@@ -840,6 +841,11 @@
   integrity sha512-kVzjari1s2YVi77D3w1yuvohV2idweYXMCDzqBiVNN63TcDWrIlTVOYpqVrvbbyOE/IyzBoTKF0fdnLPEORFxA==
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/ejs@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/ejs/-/ejs-3.1.1.tgz#29c539826376a65e7f7d672d51301f37ed718f6d"
+  integrity sha512-RQul5wEfY7BjWm0sYY86cmUN/pcXWGyVxWX93DFFJvcrxax5zKlieLwA3T77xJGwNcZW0YW6CYG70p1m8xPFmA==
 
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
@@ -1845,9 +1851,9 @@ dotenv@~10.0.0:
   resolved "https://registry.npmjs.org/dotenv/-/dotenv-10.0.0.tgz"
   integrity sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==
 
-ejs@^3.1.7:
+ejs@^3.1.7, ejs@^3.1.8:
   version "3.1.8"
-  resolved "https://registry.npmjs.org/ejs/-/ejs-3.1.8.tgz"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.8.tgz#758d32910c78047585c7ef1f92f9ee041c1c190b"
   integrity sha512-/sXZeMlhS0ArkfX2Aw780gJzXSMPnKjtspYZv+f3NiKLlubezAHDU5+9xz6gd3/NhG3txQCo6xlglmTS+oTGEQ==
   dependencies:
     jake "^10.8.5"
