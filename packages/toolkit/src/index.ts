@@ -1,7 +1,8 @@
 import { copy, readdirSync, renameSync, statSync } from 'fs-extra';
-import { join, normalize } from 'path';
+import { join } from 'path';
 import { renderFile } from 'ejs';
-import { writeFile } from 'fs';
+import { writeFileSync } from 'fs';
+import type { Answers } from 'inquirer';
 
 export const getAllFilesPathsInDir = (parent: string): string[] => {
   let res: string[] = [];
@@ -25,24 +26,27 @@ export const getAllFilesPathsInDir = (parent: string): string[] => {
   return res;
 };
 
-export const normalizeTemplateFiles = (destination: string) => {
+export const normalizeTemplateFiles = async (
+  destination: string,
+  answers: Answers
+) => {
   const filePaths = getAllFilesPathsInDir(destination);
-  filePaths.forEach((filePath) => {
-    if (filePath.includes('.hbs')) {
-      const newContent = renderFile(filePath, { name: 'kek' });
-      writeFile(filePath, newContent);
-      // console.log('newContent: ', newContent);
-      // renameSync(filePath, filePath.replace('.hbs', ''));
+  filePaths.forEach(async (filePath) => {
+    if (filePath.includes('.tmpl')) {
+      const newContent = await renderFile(filePath, answers);
+      writeFileSync(filePath, newContent);
+      renameSync(filePath, filePath.replace('.tmpl', ''));
     }
   });
 };
 
 export const generateWithTemplate = async (
   templateDir: string,
-  destination: string
+  destination: string,
+  answers: Answers
 ) => {
   await copy(templateDir, destination);
-  await normalizeTemplateFiles(destination);
+  await normalizeTemplateFiles(destination, answers);
 
   // normalizeTemplateFiles(string);
 };

@@ -14,5 +14,6 @@ packages.forEach((packageName) => {
   );
   execSync(`yarn install`, {
     cwd: `${distPath}/${packageName}`,
+    stdio: [],
   });
 });

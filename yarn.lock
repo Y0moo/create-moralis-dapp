@@ -293,7 +293,7 @@
 "@create-moralis-dapp/next@file:packages/next":
   version "1.0.1-beta.1"
   dependencies:
-    "@create-moralis-dapp/toolkit" "file:C:/Users/lovka/AppData/Local/Yarn/Cache/v6/npm-@create-moralis-dapp-next-1.0.1-beta.1-e3c72cab-94be-4d13-8559-6e43432e228e-1660193195377/node_modules/@create-moralis-dapp/toolkit"
+    "@create-moralis-dapp/toolkit" "file:C:/Users/lovka/AppData/Local/Yarn/Cache/v6/npm-@create-moralis-dapp-next-1.0.1-beta.1-abc90c01-6e4b-4a53-bf5d-093b29794538-1660211761310/node_modules/@create-moralis-dapp/toolkit"
 
 "@create-moralis-dapp/toolkit@file:packages/toolkit":
   version "1.0.1-beta.1"
@@ -3381,6 +3381,13 @@ mute-stream@0.0.8:
   version "0.0.8"
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.8.tgz"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
+
+nanospinner@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/nanospinner/-/nanospinner-1.1.0.tgz#d17ff621cb1784b0a206b400da88a0ef6db39b97"
+  integrity sha512-yFvNYMig4AthKYfHFl1sLj7B2nkHL4lzdig4osvl9/LdGbXwrdFRoqBS98gsEsOakr0yH+r5NZ/1Y9gdVB8trA==
+  dependencies:
+    picocolors "^1.0.0"
 
 natural-compare@^1.4.0:
   version "1.4.0"
