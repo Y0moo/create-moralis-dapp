@@ -2,11 +2,11 @@ import { Answers, prompt } from 'inquirer';
 import { join } from 'path';
 import {
   addPrettier,
-  execAsync,
   execWithSpinner,
   generateWithTemplate,
+  installDepsWithPackageManager,
+  PackageManager,
 } from '@create-moralis-dapp/toolkit';
-import * as ora from 'ora';
 import { web3LibSchema } from './actions/addWeb3Lib/web3LibSchema';
 import { addWeb3Lib } from './actions/addWeb3Lib';
 
@@ -32,6 +32,12 @@ export const questions = [
   //     ],
   //   },
   {
+    type: 'list',
+    name: 'packageManager',
+    message: '🧙 : Select a package manager for installing dependencies ...',
+    choices: ['yarn', 'npm', 'pnpm'],
+  },
+  {
     type: 'input',
     name: 'name',
     message: '🧙 : What name would you like to use for your new project? ...',
@@ -51,11 +57,7 @@ export const baseGenerator = async () => {
 
     addPrettier(destination);
 
-    await execWithSpinner(
-      'yarn install',
-      destination,
-      'Installing dependencies via yarn'
-    );
+    await installDepsWithPackageManager(answers.packageManager, destination);
 
     await execWithSpinner(
       'npm run format',
