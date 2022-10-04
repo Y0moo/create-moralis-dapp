@@ -35,15 +35,15 @@ export const baseAppGenerator = async () => {
   const answers: Answers = await prompt(questions);
 
   const templateDir = join(__dirname, './template');
-  const destination = join(process.cwd(), answers.name);
+  const destination = join(process.cwd(), answers['name']);
 
   try {
     await generateWithTemplate(templateDir, destination, answers);
   } catch (e) {
-    throw new Error(e);
+    throw new Error(e as string);
   }
 
   console.log(
-    `The ${answers.name} project created successfully\nProject path: ${destination}`
+    `The ${answers['name']} roject created successfully\nProject path: ${destination}`
   );
 };

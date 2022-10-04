@@ -1,0 +1,9 @@
+{
+  "name": "@create-moralis-dapp/react",
+  "version": "1.0.1-beta.1",
+  "main": "./src/index.js",
+  "types": "tsconfig.lib.json",
+  "dependencies": {
+    "@create-moralis-dapp/toolkit": "file:../toolkit"
+  }
+}

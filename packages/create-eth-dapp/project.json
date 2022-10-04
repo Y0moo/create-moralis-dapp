@@ -46,6 +46,42 @@
         "jestConfig": "packages/create-eth-dapp/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "dev": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "parallel": false,
+        "commands": [
+          {
+            "command": "nx run create-eth-dapp:build"
+          },
+          {
+            "command": "node tools/scripts/dev.js"
+          },
+          { "command": "node dist/packages/create-eth-dapp" }
+        ]
+      }
+    },
+    "watch": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "parallel": true,
+        "commands": [
+          {
+            "command": "npx nx build create-eth-dapp --watch"
+          },
+          {
+            "command": "npx nx build react --watch"
+          }
+        ]
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "build"
+        }
+      ]
     }
   },
   "tags": []

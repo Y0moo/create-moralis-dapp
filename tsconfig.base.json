@@ -1,4 +1,9 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
   "compilerOptions": {
     "target": "es2015",
     "sourceMap": true,
@@ -9,17 +14,32 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "types": ["node", "jest"],
-    "lib": ["es2019"],
+    "types": [
+      "node",
+      "jest"
+    ],
+    "lib": [
+      "es2019"
+    ],
     "declaration": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "noPropertyAccessFromIndexSignature": false,
     "baseUrl": ".",
     "rootDir": ".",
     "paths": {
-      "@create-moralis-dapp/next": ["packages/next/src/index.ts"],
-      "@create-moralis-dapp/toolkit": ["packages/toolkit/src/index.ts"],
-      "create-eth-dapp": ["packages/create-eth-dapp/src/index.ts"]
+      "@create-moralis-dapp/next": [
+        "packages/next/src/index.ts"
+      ],
+      "@create-moralis-dapp/react": [
+        "packages/react/src/index.ts"
+      ],
+      "@create-moralis-dapp/toolkit": [
+        "packages/toolkit/src/index.ts"
+      ],
+      "create-eth-dapp": [
+        "packages/create-eth-dapp/src/index.ts"
+      ]
     }
   }
 }

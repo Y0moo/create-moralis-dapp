@@ -4,6 +4,7 @@
   "projects": {
     "create-eth-dapp": "packages/create-eth-dapp",
     "next": "packages/next",
+    "react": "packages/react",
     "toolkit": "packages/toolkit"
   }
 }
