@@ -14,13 +14,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "types": [
-      "node",
-      "jest"
-    ],
-    "lib": [
-      "es2019"
-    ],
+    "types": ["node", "jest"],
+    "lib": ["es2019"],
     "declaration": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -28,18 +23,18 @@
     "baseUrl": ".",
     "rootDir": ".",
     "paths": {
-      "@create-moralis-dapp/next": [
-        "packages/next/src/index.ts"
+      "@create-moralis-dapp//work/npm-libs-names/create-moralis-dapp/dist/out-tsc/tools/generators/packages-generator/files/xxx3": [
+        "packages/work/npm-libs-names/create-moralis-dapp/dist/out-tsc/tools/generators/packages-generator/files/xxx3/src/index.ts"
       ],
-      "@create-moralis-dapp/react": [
-        "packages/react/src/index.ts"
-      ],
-      "@create-moralis-dapp/toolkit": [
-        "packages/toolkit/src/index.ts"
-      ],
-      "create-eth-dapp": [
-        "packages/create-eth-dapp/src/index.ts"
-      ]
+      "@create-moralis-dapp/next": ["packages/next/src/index.ts"],
+      "@create-moralis-dapp/react": ["packages/react/src/index.ts"],
+      "@create-moralis-dapp/toolkit": ["packages/toolkit/src/index.ts"],
+      "@create-moralis-dapp/x2": ["packages/x2/src/index.ts"],
+      "@create-moralis-dapp/x4": ["packages/x4/src/index.ts"],
+      "@create-moralis-dapp/x5": ["packages/x5/src/index.ts"],
+      "@create-moralis-dapp/x6": ["packages/x6/src/index.ts"],
+      "@create-moralis-dapp/x7": ["packages/x7/src/index.ts"],
+      "create-eth-dapp": ["packages/create-eth-dapp/src/index.ts"]
     }
   }
 }

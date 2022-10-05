@@ -59,7 +59,9 @@
           {
             "command": "node tools/scripts/dev.js"
           },
-          { "command": "node dist/packages/create-eth-dapp" }
+          {
+            "command": "node dist/packages/create-eth-dapp"
+          }
         ]
       }
     },

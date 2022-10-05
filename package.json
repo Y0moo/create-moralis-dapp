@@ -9,16 +9,21 @@
     "publish:all": "nx run-many --target=publish --ver=1.0.1-beta.11 --tag=latest  ",
     "ced:dev": "node tools/scripts/dev.js"
   },
-  "type": "module",
+  "type": "commonjs",
   "private": true,
   "devDependencies": {
     "@nrwl/cli": "14.5.1",
+    "@nrwl/devkit": "14.5.1",
     "@nrwl/eslint-plugin-nx": "14.5.1",
     "@nrwl/jest": "14.5.1",
     "@nrwl/js": "14.5.1",
     "@nrwl/linter": "14.5.1",
     "@nrwl/node": "14.5.1",
+    "@nrwl/nx-plugin": "14.5.1",
     "@nrwl/workspace": "14.5.1",
+    "@swc-node/register": "^1.4.2",
+    "@swc/cli": "~0.1.55",
+    "@swc/core": "^1.2.173",
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "^8.0.0",
     "@types/jest": "27.4.1",
@@ -32,6 +37,7 @@
     "fs-extra": "^10.1.0",
     "inquirer": "^8.0.0",
     "jest": "27.5.1",
+    "jsonc-eslint-parser": "^2.1.0",
     "lodash": "^4.17.21",
     "nx": "14.5.1",
     "prettier": "^2.6.2",
@@ -44,8 +50,7 @@
     "packages/**"
   ],
   "dependencies": {
-    "@nrwl/nx-plugin": "^14.8.2",
-    "@nrwl/react": "^14.8.2",
+    "@swc/helpers": "~0.3.3",
     "tslib": "^2.3.0"
   }
 }
