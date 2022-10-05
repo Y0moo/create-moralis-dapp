@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "lib:new": "nx generate @nrwl/node:library --buildable",
+    "lib:new": "nx workspace-generator packages-generator",
     "lib:remove": "nx generate remove",
     "build:all": "nx run-many --target=build",
     "publish:all": "nx run-many --target=publish --ver=1.0.1-beta.11 --tag=latest  ",
